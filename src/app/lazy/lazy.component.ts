@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TRANSLOCO_SCOPE } from '@ngneat/transloco';
 import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
-import { switchMap, tap } from 'rxjs';
 
 export const loader = ['en'].reduce((acc: any, lang) => {
   acc[lang] = () => import(`./i18n/${lang}.json`);
